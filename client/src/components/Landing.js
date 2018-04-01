@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import pic from './images/couple.jpeg';
-
+import React from 'react';
 
 const Landing = () => {
 
@@ -10,7 +8,7 @@ const Landing = () => {
         Wedding Management Tool
       </h1>
 
-      <img classNameName="materialboxed" width="100%" src={"http://lorempixel.com/1000/1200"} alt=""/>
+      <img className="materialboxed" width="100%" src={"http://lorempixel.com/1000/1200"} alt=""/>
       Collect feedback
     </div>
   )

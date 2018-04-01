@@ -5,6 +5,7 @@ const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
+require('./models/Survey');
 
 mongoose.connect(keys.mongoURI);
 
@@ -22,6 +23,8 @@ app.use(passport.session());
 
 
 require('./routes/authRoutes')(app);
+require('./routes/surveyRoutes')(app);
+
 
 if (process.env.NODE_ENV === 'production') {
   //express will serve production assets
@@ -36,4 +39,6 @@ if (process.env.NODE_ENV === 'production') {
 
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, function() {
+  console.log('Express port: ', this.address().port);
+});

@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Landing from "./Landing";
 import Header from "./Header";
-import PlannerTool from "./PlannerTool";
-// import Dashboard from "./Dashboard";
+//import Dashboard from "./Dashboard";
+
 
 const Dashboard = () => <h2>Dashboard</h2>
-const SurveyNew = () => <h2>SurveyNew</h2>
+const New = () => <h2>New</h2>
 
   class App extends Component {
     componentDidMount() {
@@ -23,8 +23,8 @@ const SurveyNew = () => <h2>SurveyNew</h2>
               <Header />
               <Route exact path="/" component = {Landing} />
               <Route exact path="/surveys" component = {Dashboard} />
-              <Route path="/surveys/new" component = {SurveyNew} />
-              <Route path="/planner" component = {PlannerTool} />
+              <Route path="/surveys/new" component = {New} />
+
 
             </div>
           </BrowserRouter>
