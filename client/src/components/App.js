@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Landing from "./Landing";
 import Header from "./Header";
+import Gallery from "./Gallery";
+import NewGallery from "./NewGallery";
 //import Dashboard from "./Dashboard";
 
 
@@ -24,7 +26,8 @@ const New = () => <h2>New</h2>
               <Route exact path="/" component = {Landing} />
               <Route exact path="/surveys" component = {Dashboard} />
               <Route path="/surveys/new" component = {New} />
-
+              <Route exact path="/gallery" component = {Gallery} />
+              <Route exact path="/newgallery" component = {NewGallery} />
 
             </div>
           </BrowserRouter>
