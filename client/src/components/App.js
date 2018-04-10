@@ -6,16 +6,18 @@ import Landing from "./Landing";
 import Header from "./Header";
 import Gallery from "./Gallery";
 import NewGallery from "./NewGallery";
-//import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard";
+import InviteNew from "./invites/InviteNew";
 
 
-const Dashboard = () => <h2>Dashboard</h2>
-const New = () => <h2>New</h2>
+
 
   class App extends Component {
     componentDidMount() {
       this.props.fetchUser();
     }
+
+
 
     render() {
       return (
@@ -24,8 +26,8 @@ const New = () => <h2>New</h2>
             <div>
               <Header />
               <Route exact path="/" component = {Landing} />
-              <Route exact path="/surveys" component = {Dashboard} />
-              <Route path="/surveys/new" component = {New} />
+              <Route exact path="/invites" component = {Dashboard} />
+              <Route path="/invites/new" component = {InviteNew} />
               <Route exact path="/gallery" component = {Gallery} />
               <Route exact path="/newgallery" component = {NewGallery} />
 

@@ -19,13 +19,22 @@ renderContent() {
       <nav>
         <div className="nav-wrapper">
           <Link
-            to={this.props.auth ? '/surveys' : '/'}
+            to={this.props.auth ? '/invites' : '/'}
             className="left brand-logo"
           >
-            Wedding Management
+            Weddr
           </Link>
-          <ul className="right">
-            {this.renderContent()}
+          <ul className="right hide-on-med-and-down">
+            <li>
+              <Link
+                to={this.props.auth ? '/invites' : '/'}
+              >
+                Invites
+              </Link>
+            </li>
+            <li>
+              {this.renderContent()}
+            </li>
           </ul>
         </div>
       </nav>
