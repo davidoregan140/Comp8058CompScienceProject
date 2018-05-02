@@ -13,7 +13,7 @@ module.exports = app => {
     //Mongoose query to get back all the info we need from the invite
     const invites = await Invite.find({ _user: req.user.id }).select({
       //set to true as we want to get back all the recipients
-      //recipients: true
+      recipients: 0
     });
 
     res.send(invites);
@@ -60,10 +60,13 @@ module.exports = app => {
   });
 
   app.post("/api/invites", requireLogin, async (req, res) => {
-    const { title, subject, body, recipients } = req.body;
+    const { title, couple, venue, date, subject, body, recipients } = req.body;
 
     const invite = new Invite({
       title: title,
+      couple: couple,
+      venue: venue,
+      date: date,
       subject: subject,
       body: body,
       recipients: recipients.split(",").map(email => ({ email: email.trim() })),

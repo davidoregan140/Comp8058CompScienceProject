@@ -1,14 +1,14 @@
-const keys = require('../../config/keys');
+const keys = require("../../config/keys");
 const user = {
-  mainImage: 'http://res.cloudinary.com/wedmgmgt/image/upload/v1522669187/oc0vuxkcwpmljvkranzk.jpg'
-}
+  mainImage:
+    "http://res.cloudinary.com/wedmgmgt/image/upload/c9fps9o9nnr73gsyljcn.jpg"
+};
 
 module.exports = invite => {
-
-return `
+  return `
   <html>
   <head>
-  <title></title>
+  <title>Wedding Invite</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -156,7 +156,9 @@ return `
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                               <tr>
                                     <td class="padding" align="center">
-                                      <a href="http://litmus.com" target="_blank"><img src="${user.mainImage}" width="500" height="400" border="0" alt="Insert alt text here" style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px;" class="img-max" /></a>
+                                      <a href="http://litmus.com" target="_blank"><img src="${
+                                        user.mainImage
+                                      }" width="500" height="400" border="0" alt="Insert alt text here" style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px;" class="img-max" /></a>
                                   </td>
                               </tr>
                               <tr>
@@ -164,10 +166,24 @@ return `
                                       <!-- COPY -->
                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                           <tr>
-                                              <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding">We are getting Married</td>
+                                              <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding">${
+                                                invite.title
+                                              }</td>
                                           </tr>
                                           <tr>
-                                              <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding"><p>${invite.body}</p></td>
+                                              <td align="center" style="font-size: 25px; font-family: Herculanum, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding">Wedding of: ${
+                                                invite.couple
+                                              }</td>
+                                          </tr>
+                                          <tr>
+                                              <td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding">On: ${
+                                                invite.date
+                                              }</td>
+                                          </tr>
+                                          <tr>
+                                              <td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding"><p>${
+                                                invite.body
+                                              }</p></td>
                                           </tr>
                                       </table>
                                   </td>
@@ -180,9 +196,17 @@ return `
                                               <td align="center" style="padding-top: 25px;" class="padding">
                                                   <table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
                                                       <tr>
-                                                          <td align="center" style="border-radius: 3px;" bgcolor="#256F9C"><a href="${keys.redirectDomain}/api/invites/${invite.id}/yes" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" class="mobile-button">Yes I would be delighted to attend &rarr;</a></td>
+                                                          <td align="center" style="border-radius: 3px;" bgcolor="#256F9C"><a href="${
+                                                            keys.redirectDomain
+                                                          }/api/invites/${
+    invite.id
+  }/yes" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" class="mobile-button">Yes I would be delighted to attend &rarr;</a></td>
 
-                                                          <td align="center" style="border-radius: 3px;" bgcolor="#256F9C"><a href="${keys.redirectDomain}/api/invites/${invite.id}/no" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" class="mobile-button">No I'm sorry I cannot attend &rarr;</a></td>
+                                                          <td align="center" style="border-radius: 3px;" bgcolor="#256F9C"><a href="${
+                                                            keys.redirectDomain
+                                                          }/api/invites/${
+    invite.id
+  }/no" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" class="mobile-button">No I'm sorry I cannot attend &rarr;</a></td>
 
 
 
@@ -217,7 +241,8 @@ return `
               <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 500px;" class="responsive-table">
                   <tr>
                       <td align="center" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
-                          The Haven Hotel, Dunmore East, Co Waterford
+
+                          <p>${invite.venue}</p>
                           <br>
                           <a href="http://litmus.com" target="_blank" style="color: #666666; text-decoration: none;">Unsubscribe</a>
                           <span style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
@@ -238,5 +263,4 @@ return `
   </html>
 
 `;
-
 };

@@ -5,10 +5,12 @@ import InviteList from "./invites/InviteList";
 const Dashboard = () => {
   return (
     <div style={{ textAlign: "center" }}>
-      <InviteList />
-      <h1>Wedding Dashboard</h1>
-      <p>Here is where we will help you design your dream day</p>
+      <h1 className="title">Wedding Dashboard</h1>
+      <p className="subtitle">
+        Here is where we will help you design your dream day
+      </p>
 
+      <InviteList />
       <div style={{ textAlign: "center" }} className="fixed-action-btn">
         <Link
           to="/invites/new"
