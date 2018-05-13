@@ -86,4 +86,12 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.delete("/api/invites/delete/:id", async (req, res) => {
+    await Invite.deleteOne({ _id: req.params.id });
+    const invites = await Invite.find({ _user: req.user.id })
+      .sort({ dateSent: -1 })
+      .select({});
+    res.send(invites);
+  });
 };

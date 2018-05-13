@@ -12,6 +12,9 @@ import InviteNew from "./invites/InviteNew";
 import CloudGallery from "./CloudGallery.js";
 import ChatBox from "./chat/ChatBox";
 import Planner from "./planner/Planner";
+import GuestBoard from "./GuestBoard";
+import GuestNew from "./guests/GuestNew";
+
 //import InviteList from "./invites/InviteList.js";
 
 class App extends Component {
@@ -33,6 +36,8 @@ class App extends Component {
             <Route exact path="/cloudgallery" component={CloudGallery} />
             <Route exact path="/chat" component={ChatBox} />
             <Route exact path="/planner" component={Planner} />
+            <Route exact path="/guests" component={GuestBoard} />
+            <Route path="/guests/new" component={GuestNew} />
           </div>
         </BrowserRouter>
       </div>

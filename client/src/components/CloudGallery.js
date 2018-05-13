@@ -36,12 +36,6 @@ class CloudGallery extends Component {
     );
   }
 
-  // deleteImage() {
-  //   window.cloudinary.v2.uploader.destroy(id, function(error, result) {
-  //     console.log(result);
-  //   });
-  // }
-
   render() {
     const { gallery } = this.state;
     return (

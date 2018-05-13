@@ -1,4 +1,3 @@
-//mode/chats.js
 "use strict";
 //import dependency
 var mongoose = require("mongoose");

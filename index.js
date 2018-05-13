@@ -10,6 +10,7 @@ var secrets = require("./secrets");
 require("./models/User");
 require("./services/passport");
 require("./models/Invite");
+require("./models/Guest");
 
 var mongoDB = secrets.requestSecret("db_uri");
 mongoose.connect(mongoDB);
@@ -38,6 +39,7 @@ app.use(express.static(__dirname + "/emailTemplates/images"));
 
 require("./routes/authRoutes")(app);
 require("./routes/inviteRoutes")(app);
+require("./routes/guestRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   //express will serve production assets

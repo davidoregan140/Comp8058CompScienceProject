@@ -26,6 +26,9 @@ class Header extends Component {
               <Link to={this.props.auth ? "/invites" : "/"}>Invites</Link>
             </li>
             <li>
+              <Link to={this.props.auth ? "/guests" : "/"}>Guests</Link>
+            </li>
+            <li>
               <Link to={this.props.auth ? "/cloudgallery" : "/"}>Gallery</Link>
             </li>
             <li>

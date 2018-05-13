@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchInvites } from "../../actions";
+import { fetchInvites, deleteInvite } from "../../actions";
 import "../invite.css";
 
 const user = {
@@ -31,6 +31,13 @@ class InviteList extends Component {
           <div className="card-action">
             <a>Attending: {invite.yes}</a>
             <a>Not Attending: {invite.no}</a>
+            <a
+              href="#"
+              onClick={() => this.props.deleteInvite(invite._id)}
+              className="right"
+            >
+              Delete
+            </a>
           </div>
         </div>
       );
@@ -46,4 +53,6 @@ function mapStateToProps({ invites }) {
   return { invites };
 }
 
-export default connect(mapStateToProps, { fetchInvites })(InviteList);
+export default connect(mapStateToProps, { fetchInvites, deleteInvite })(
+  InviteList
+);
