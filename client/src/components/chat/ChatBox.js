@@ -1,3 +1,13 @@
+/***************************************************************************************
+ *    Based on/Adapted from
+ *    Titles: React Getting Started — The MERN Stack Tutorial
+ *    Author: Gilbraith, Bryan
+ *    Date: 2016
+ *    Code version: 1.0
+ *    Sources: https://medium.com/@bryantheastronaut/ok-here-we-go-b9f683c5a00c
+ *
+ ***************************************************************************************/
+
 import React, { Component } from "react";
 import axios from "axios";
 import ChatList from "./ChatList";

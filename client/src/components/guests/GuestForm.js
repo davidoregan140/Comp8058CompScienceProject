@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import GuestField from "./GuestField";
-//import validateEmails from "../../utils/validateEmails";
+import validateEmails from "../../utils/validateEmails";
 import GuestFormFields from "./GuestFormFields";
 
 class GuestForm extends Component {
@@ -42,7 +42,7 @@ class GuestForm extends Component {
 function validate(values) {
   const errors = {};
 
-  //errors.recipients = validateEmails(values.recipients || "");
+  errors.email = validateEmails(values.email || "");
 
   _.each(GuestFormFields, ({ name }) => {
     if (!values[name]) {

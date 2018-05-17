@@ -5,7 +5,7 @@ const guestSchema = new Schema({
   name: String,
   email: String,
   agegroup: String,
-  inviteYN: { type: Boolean, default: false },
+  //inviteYN: { type: Boolean, default: false },
   _user: { type: Schema.Types.ObjectId, ref: "User" }
 });
 

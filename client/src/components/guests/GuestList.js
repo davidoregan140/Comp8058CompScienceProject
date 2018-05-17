@@ -1,12 +1,17 @@
+/***************************************************************************************
+ *    Based on/Adapted from
+ *    Titles: Udemy Tutorials & React-Redux documentation
+ *    Author: Grider, S (Udemy Tutorials)
+ *    Date: 2018
+ *    Code version: 1.0
+ *    Sources: https://www.udemy.com/node-with-react-fullstack-web-development/learn/v4/content
+               https://redux.js.org/basics/usage-with-react
+ *
+ ***************************************************************************************/
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchGuests, deleteGuest } from "../../actions";
-//import "../invite.css";
-
-// const user = {
-//   mainImage:
-//     "http://res.cloudinary.com/wedmgmgt/image/upload/c9fps9o9nnr73gsyljcn.jpg"
-// };
 
 class GuestList extends Component {
   componentDidMount() {

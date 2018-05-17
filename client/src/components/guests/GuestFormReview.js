@@ -10,7 +10,6 @@ const GuestFormReview = ({ onCancel, formValues, submitGuest, history }) => {
     return (
       <div key={name}>
         <label>{label}</label>
-        <type>{type}</type>
         <div>{formValues[name]}</div>
       </div>
     );

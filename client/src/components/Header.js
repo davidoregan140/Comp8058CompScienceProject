@@ -1,3 +1,5 @@
+//this is where each component link is displayed
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -44,7 +46,7 @@ class Header extends Component {
       <nav>
         <div className="nav-wrapper">
           <Link to={(this.props.auth, "/")} className="left brand-logo">
-            Weddr
+            Wedding Management
           </Link>
           <ul className="right hide-on-med-and-down">
             <li>{this.renderContent()}</li>

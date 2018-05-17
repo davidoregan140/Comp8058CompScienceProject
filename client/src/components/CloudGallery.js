@@ -1,3 +1,13 @@
+/***************************************************************************************
+ *    Based on/Adapted from
+ *    Title: Build Your Own Giphy Clone with React and Cloudinary
+ *    Author: Unachukwu, Chilezie
+ *    Date: 2018
+ *    Code version: 1.0
+ *    Availability: https://scotch.io/tutorials/build-your-own-giphy-alternative-with-react
+ *
+ ***************************************************************************************/
+
 import React, { Component } from "react";
 import axios from "axios";
 //import { uploadWidget } from "../utils/WidgetHelper";
@@ -11,7 +21,7 @@ class CloudGallery extends Component {
 
   getImages() {
     axios
-      .get("https://res.cloudinary.com/wedmgmgt/image/list/xmas.json")
+      .get("https://res.cloudinary.com/wedmgmgt/image/list/wedding.json")
       .then(res => {
         this.setState({ gallery: res.data.resources });
       });
@@ -27,7 +37,7 @@ class CloudGallery extends Component {
         cloud_name: "wedmgmgt",
         api_secret: "ewVP1GTYdDRzWY444VrO1-VnVHo",
         upload_preset: "v4nver2a",
-        tags: ["xmas"],
+        tags: ["wedding"],
         client_allowed_formats: ["jpeg", "png", "jpg"]
       },
       function(error, result) {

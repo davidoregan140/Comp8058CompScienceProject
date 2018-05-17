@@ -15,7 +15,7 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "webhook": "lt --p 5000 -s foolish-snail-9"
   },
-  "author": "",
+  "author": "David O'Regan",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
@@ -47,6 +47,6 @@
     "sendgrid": "^5.2.3",
     "source-map-support": "^0.5.4",
     "superagent": "^3.8.2",
-    "yarn": "^1.5.1"
+    "yarn": "^1.6.0"
   }
 }

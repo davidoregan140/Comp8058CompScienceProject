@@ -1,3 +1,14 @@
+/***************************************************************************************
+ *    Based on/Adapted from
+ *    Title: React with Firebase Notes / To-Do App Tutorial & Firebase documentation
+ *    Author: Doyle, Wes
+ *    Date: 2018
+ *    Code version: 1.0
+ *    Sources: https://www.youtube.com/watch?v=-RtJroTMDf4
+ *              https://firebase.google.com/docs/web/setup
+ *
+ ***************************************************************************************/
+
 import React, { Component } from "react";
 import "./NoteForm.css";
 

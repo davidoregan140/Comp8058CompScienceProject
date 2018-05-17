@@ -1,3 +1,15 @@
+/***************************************************************************************
+ *    Based on/Adapted from
+ *    Titles: Udemy Tutorials & React-Redux documentation
+ *    Author: Grider, S (Udemy Tutorials)
+ *    Date: 2018
+ *    Code version: 1.0
+ *    Sources: https://www.udemy.com/node-with-react-fullstack-web-development/learn/v4/content
+              http://www.passportjs.org/docs/
+              https://developers.google.com/identity/protocols/OAuth2
+ *
+ ***************************************************************************************/
+
 const sendgrid = require("sendgrid");
 const helper = sendgrid.mail;
 const keys = require("../config/keys");
